@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para el diseño responsivo -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlaza a un archivo de estilos personalizado -->
+    <title>Registro</title>
+</head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <main>
+        <h1>Registro</h1>
+        <form action="process_signup.php" method="POST">  <!-- Cambia "process_signup.php" a tu archivo de procesamiento -->
+            <div class="mb-3">
+                <label for="username" class="form-label">Nombre de usuario</label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>  <!-- Enlace a la página de inicio de sesión -->
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tapias Sistemas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

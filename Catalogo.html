@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para el diseño responsivo -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlaza a un archivo de estilos personalizado -->
+    <title>Catalogo</title> <!-- Establece el título de la página -->
+
+</head>
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+
+                <a class="logo" href="inicio.html"><img src="img/logo.png" alt="Logo"></a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Precios.html">Lista de Precios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="configuracion.html">Configuración</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="alert alert-danger" role="alert">
+            <strong>Info!</strong> Add row and Delete row are working. Edit row displays modal with row cells information.
+        </div>
+        <a class="btn btn-success" style="float:left;margin-right:20px;" href="https://codepen.io/collection/XKgNLN/" target="_blank">Other examples on Codepen</a>
+
+        <table id="example" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>IT</th>
+                    <th>CAUPLAS</th>
+                    <th>TORFLEX</th>
+                    <th>INDOMAX</th>
+                    <th>OE</th>
+                    <th>DESCRIPCION</th>
+                    <th>ESTATUS</th>
+                    <th>FOTO B</th>
+                    <th>FOTO C</th>
+                    <th>Amount</th>
+                    <th style="text-align:center;width:100px;">Add row 
+
+                        <button type="button" data-func="dt-add" class="btn btn-success btn-xs dt-add">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                        </button>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Alphabet puzzle</td>
+                    <td>2016/01/15</td>
+                    <td>Done</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td>1000</td>
+                    <td><button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs dt-delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>Creative brochure</td>
+                    <td>2017/05/22</td>
+                    <td>Done</td>
+                    <td>800</td>
+                    <td>800</td>
+                    <td>800</td>
+                    <td>800</td>
+                    <td>800</td>
+                    <td>1000</td>
+                    <td><button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs dt-delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>Custom calendar</td>
+                    <td>2017/04/15</td>
+                    <td>In Progress</td>
+                    <td>1500</td>
+                    <td>1500</td>
+                    <td>1500</td>
+                    <td>1500</td>
+                    <td>1500</td>
+                    <td>1000</td>
+                    <td><button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-danger btn-xs dt-delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>Social media banner</td>
+                    <td>2017/06/28</td>
+                    <td>Planned</td>
+                    <td>1200</td>
+                    <td>1200</td>
+                    <td>1200</td>
+                    <td>1200</td>
+                    <td>1200</td>
+                    <td>1000</td>
+                    <td><button type="button" class="btn btn-primary btn-xs dt-edit" style="margin-right:16px;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-xs dt-delete"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Modal para editar fila -->
+
+        <dialog id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h4 class="modal-title">Row information</h4>
+                    </div>
+                    <div class="modal-body">                    
+                        <!-- Aquí se deberían mostrar los detalles de la fila seleccionada -->
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+
+        </dialog>
+    </main>
+
+    <!-- Fin del contenido principal -->
+    <!-- Pie de página -->
+    <footer>
+
+        <p>© 2024 Tapias Sistemas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

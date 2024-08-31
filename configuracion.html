@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para el diseño responsivo -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlaza a un archivo de estilos personalizado -->
+    <title>Configuración</title> <!-- Establece el título de la página -->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="logo" href="inicio.html"><img src="img/logo.png" alt="Logo"></a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Precios.html">Lista de Precios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="configuracion.html">Configuración</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Configuración</h1>
+        <form>
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre de la Empresa</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre de la Empresa">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email de Contacto</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" placeholder="Teléfono">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </form>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Fin del contenido principal -->
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tapias Sistemas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

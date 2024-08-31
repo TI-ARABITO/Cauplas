@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"> <!-- Define la codificación de caracteres del documento como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura el viewport para el diseño responsivo -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlaza a un archivo de estilos personalizado -->
+    <title>Lista de Precios</title> <!-- Establece el título de la página -->
+
+</head>
+<body class="p-3 m-0 border-0 bd-example">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a clas="logo" href="inicio.html"><img src="img/logo.png" alt="Logo"></a>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Precios.html">Lista de Precios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pedidos.html">Pedidos</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="configuracion.html">Configuración</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <button id="addRow" class="btn btn-success" style="margin-right: 10px;">Agregar</button>
+            <button id="exportExcel" class="btn btn-info" style="margin-right: 10px;">Excel</button>
+            <button id="exportPdf" class="btn btn-warning" style="margin-right: 10px;">PDF</button>
+            <button id="printTable" class="btn btn-default">Imprimir</button>
+        </div>
+        <table id="precios" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>IT</th>
+                    <th>CAUPLAS</th>
+                    <th>TORFLEX</th>
+                    <th>INDOMAX</th>
+                    <th>OE</th>
+                    <th>DESCRIPCION</th>
+                    <th>PRECIO FCA</th>
+                    <th>PRECIO VENTA</th>
+                    <th>DESCUENTO %</th>
+                    <th>PRECIO CON DESCUENTO</th>
+                    <th>ESTATUS</th>
+                    <th style="text-align:center;width:100px;">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí van los datos dinámicamente -->
+            </tbody>
+        </table>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Información de la fila</h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+
+    <script src="js/precios.js"></script>
+        <!-- Fin del contenido principal -->
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Tapias Sistemas. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
